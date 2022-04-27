@@ -71,18 +71,21 @@ class House:
         return colored(f'В доме еды осталось {self.food}, денег {self.money}', color='yellow')
 
 
-beavis = Man(name='Бивис')
-butthead = Man(name='Батхед')
-my_sweet_home = House()
+citizens = [
+    Man(name='Бивис'),
+    Man(name='Батхед'),
+    Man(name='Кенни')
+]
 
-beavis.go_into_the_house(house=my_sweet_home)
-butthead.go_into_the_house(house=my_sweet_home)
+my_sweet_home = House()
+for citizen in citizens:
+    citizen.go_into_the_house(house=my_sweet_home)
 
 for day in range(1, 366):
     print(f'=-=-=-=-=-=-=-=-=-= День {day} =-=-=-=-=-=-=-=-=-=')
-    beavis.act()
-    butthead.act()
+    for citizen in citizens:
+        citizen.act()
     print('--------------------------------------------------')
     print(my_sweet_home)
-    print(beavis)
-    print(butthead)
+    for citizen in citizens:
+        print(citizen)
