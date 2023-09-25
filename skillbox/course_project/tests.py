@@ -1,13 +1,10 @@
-from copy import deepcopy
 from unittest import TestCase
 from unittest.mock import patch, Mock
 
 from pony.orm import db_session, rollback
-from vk_api.bot_longpoll import VkBotMessageEvent
 
-from course_project import settings
-from course_project.bot import Bot
-from course_project.generate_ticket import generate_ticket
+from skillbox.course_project import settings
+from skillbox.course_project.generate_ticket import generate_ticket
 
 
 def isolate_db(test_func):

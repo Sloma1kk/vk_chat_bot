@@ -1,5 +1,5 @@
 from pony.orm import *
-from course_project.settings import DB_CONFIG
+from skillbox.course_project.settings import DB_CONFIG
 
 db = Database()
 db.bind(**DB_CONFIG)

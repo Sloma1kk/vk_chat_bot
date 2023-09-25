@@ -6,7 +6,7 @@ import logging
 import requests
 from pony.orm import db_session
 import handlers
-from course_project.models import UserState, Registration
+from skillbox.course_project.models import UserState, Registration
 
 try:
     import settings
